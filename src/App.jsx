@@ -32,22 +32,23 @@ function App() {
     window.navigator.clipboard.writeText(password);
     passwordRef.current.select();
   };
-
+//
   return (
-    <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-green-800 text-yellow-300">
+    <div className="w-full max-w-md mx-auto rounded-lg px-4 py-3 my-8  text-yellow-300 shadow-2xl shadow-slate-900 bg-clip-padding backdrop-filter bg-white bg-opacity-10 backdrop-blur-md">
       <h1 className="py-2 text-lg">Password Generator</h1>
       <div className="flex shadow rounded-lg overflow-hidden mb-4">
         <input
           type="text"
           id="length"
           value={password}
-          className="outline-none w-full py-1 px-3 text-black"
+          //
+          className=" bg-white bg-opacity-10 hover:bg-opacity-20 transition duration-500 shadow-inner shadow-slate-600/90 rounded-md p-3 outline-none w-full py-1 px-3 text-white"
           placeholder="Password"
           readOnly
           ref={passwordRef}
         />
         <button
-          className="outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0"
+          className="px-3 py-2 shadow-md shadow-slate-600/70 w-5/12 bg-opacity-30 hover:bg-opacity-40 transition duration-500 bg-white rounded-md "
           onClick={() => copyToClipboard(password)}
         >
           copy
@@ -80,7 +81,7 @@ function App() {
         />
         <label htmlFor="character">Characters</label>
       </div>
-      <button className="" onClick={generatePassword}>
+      <button className="mx-auto flex justify-center px-3 py-2 shadow-md shadow-slate-600/70 w-5/12 bg-opacity-30 hover:bg-opacity-40 transition duration-500 bg-white rounded-md" onClick={generatePassword}>
         <img src={logo} alt="reload" />
       </button>
     </div>
