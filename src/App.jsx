@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import "./App.css";
-import logo from "D:/web development/react/passwordGenerator/src/assets/logo.svg";
+import logo from "../public/logo.svg"
 
 function App() {
   const [length, setLength] = useState(0);
@@ -32,7 +32,7 @@ function App() {
     window.navigator.clipboard.writeText(password);
     passwordRef.current.select();
   };
-//
+  //
   return (
     <div className="w-full max-w-md mx-auto rounded-lg px-4 py-3 my-8  text-yellow-300 shadow-2xl shadow-slate-900 bg-clip-padding backdrop-filter bg-white bg-opacity-10 backdrop-blur-md">
       <h1 className="py-2 text-lg">Password Generator</h1>
@@ -41,7 +41,6 @@ function App() {
           type="text"
           id="length"
           value={password}
-          //
           className=" bg-white bg-opacity-10 hover:bg-opacity-20 transition duration-500 shadow-inner shadow-slate-600/90 rounded-md p-3 outline-none w-full py-1 px-3 text-white"
           placeholder="Password"
           readOnly
@@ -81,7 +80,10 @@ function App() {
         />
         <label htmlFor="character">Characters</label>
       </div>
-      <button className="mx-auto flex justify-center px-3 py-2 shadow-md shadow-slate-600/70 w-5/12 bg-opacity-30 hover:bg-opacity-40 transition duration-500 bg-white rounded-md" onClick={generatePassword}>
+      <button
+        className="mx-auto flex justify-center px-3 py-2 shadow-md shadow-slate-600/70 w-5/12 bg-opacity-30 hover:bg-opacity-40 transition duration-500 bg-white rounded-md"
+        onClick={generatePassword}
+      >
         <img src={logo} alt="reload" />
       </button>
     </div>
