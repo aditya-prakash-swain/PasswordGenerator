@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import "./App.css";
-import logo from "../public/logo.svg"
+import logo from "../public/logo.svg";
 
 function App() {
   const [length, setLength] = useState(0);
@@ -46,8 +46,13 @@ function App() {
           readOnly
           ref={passwordRef}
         />
+
         <button
-          className="px-3 py-2 shadow-md shadow-slate-600/70 w-5/12 bg-opacity-30 hover:bg-opacity-40 transition duration-500 bg-white rounded-md "
+          className="px-3 py-2 shadow-md shadow-slate-600/70 w-5/12 bg-opacity-30 hover:bg-opacity-40  duration-500 
+cursor-pointer transition-all bg-gray-700 rounded-lg
+border-yellow-300 ml-2
+border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px]
+active:border-b-[2px] active:brightness-90 active:translate-y-[2px] "
           onClick={() => copyToClipboard(password)}
         >
           copy
@@ -80,8 +85,14 @@ function App() {
         />
         <label htmlFor="character">Characters</label>
       </div>
+
       <button
-        className="mx-auto flex justify-center px-3 py-2 shadow-md shadow-slate-600/70 w-5/12 bg-opacity-30 hover:bg-opacity-40 transition duration-500 bg-white rounded-md"
+        className="
+        mx-auto flex justify-center  shadow-md shadow-slate-600/70 w-5/12 bg-opacity-30 hover:bg-opacity-40  duration-500
+        cursor-pointer transition-all bg-gray-800 text-white px-6 py-2 rounded-lg
+border-yellow-300
+border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px]
+active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
         onClick={generatePassword}
       >
         <img src={logo} alt="reload" />
